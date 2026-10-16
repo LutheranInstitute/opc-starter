@@ -1,0 +1,31 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>&gt;_æ^æ://#opc</title><meta name="theme-color" content="#050516">
+<link rel="alternate" type="application/json" href="ae.json"><link rel="help" href="llms.txt">
+<style>
+body{margin:0;min-height:100vh;background:#050516;color:#e8e8f0;font:15px/1.5 ui-monospace,"JetBrains Mono",monospace;display:flex;justify-content:center}
+main{width:min(92vw,520px);padding:40px 0}
+.sym{font:800 54px/1 ui-monospace,monospace}.p{color:#B4FF2E}.a{color:#D4AF37}.c{color:#00EAFF}
+.opc{display:inline-block;margin:14px 0;color:#E8423F;border:1px solid #E8423F;padding:4px 10px;border-radius:4px;letter-spacing:.25em;font-weight:800;font-size:12px}
+h1{font:800 34px/1.1 system-ui,sans-serif;margin:8px 0}.addr{color:#00EAFF;word-break:break-all}.tag{color:#9aa0b8}
+.offer{border:1px solid #D4AF37;border-radius:10px;padding:12px 14px;margin:10px 0}.offer b{color:#D4AF37}
+a{color:#B4FF2E}.chips span{display:inline-block;margin:4px 4px 0 0;padding:3px 8px;border:1px solid #565eff;border-radius:999px;font-size:12px;color:#aab}
+footer{margin-top:28px;color:#667;font-size:12px}
+</style></head><body><main>
+<div class="sym"><span class="p">&gt;_</span><span class="a">æ</span><span class="c">:</span></div>
+<div class="opc">一人公司 · OPC</div>
+<h1 id="n">…</h1><div class="addr" id="ad"></div><p class="tag" id="tg"></p>
+<div id="of"></div><div class="chips" id="ch"></div>
+<footer><span id="ft"></span> · <a href="ae.json">ae.json</a> · <a href="llms.txt">llms.txt</a> · #ioa · #opensourceware</footer>
+</main><script>
+var zh=/^zh/i.test(navigator.language||'');
+var T=zh?["智能体提议，我来批准","我：唯一的负责人","智能体：我的团队","多个智能体，一个负责人"]:["Agents propose, I approve","Me: the one principal","Agents: my team","Many agents. One principal."];
+fetch('ae.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(m){
+document.title=m.principal+' · >_æ^æ://#opc';
+document.getElementById('n').textContent=m.principal;
+document.getElementById('ad').textContent=m.address;
+document.getElementById('tg').textContent=m.tagline;
+document.getElementById('of').innerHTML=(m.offers||[]).map(function(o){var t=document.createElement('div');t.textContent=o.detail;return '<div class="offer"><b>'+(o.url?'<a href="'+encodeURI(o.url)+'">':'')+o.title.replace(/</g,'&lt;')+(o.url?'</a>':'')+'</b><br>'+t.innerHTML+'</div>'}).join('');
+document.getElementById('ch').innerHTML=T.slice(0,3).map(function(x){return '<span>'+x+'</span>'}).join('');
+document.getElementById('ft').textContent=T[3];
+}).catch(function(){document.getElementById('n').textContent='ae.json ?'});
+</script></body></html>
