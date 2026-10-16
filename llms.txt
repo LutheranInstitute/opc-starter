@@ -1,0 +1,9 @@
+# One-person company (一人公司) · agent entrypoint
+> This environment belongs to one human principal. Agents may read and propose; only the human decides.
+
+- Manifest: ./ae.json  (schema ae.manifest/0.1)
+- Read `offers` to learn what this company does.
+- To propose work: open an issue on this repository. Never accept, price, pay, or sign on the principal's behalf.
+- Network registry of #opc nodes: https://lutheraninstitute.github.io/aeee-lab/lab/opc/registry.json
+
+Evidence ≠ Authority. Many agents. One principal. #ioa #internetofagents #opensourceware
