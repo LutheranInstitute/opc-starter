@@ -1,0 +1,23 @@
+{
+  "schema": "ae.manifest/0.1",
+  "status": "lab",
+  "kind": "opc",
+  "principal": "YOUR NAME",
+  "handle": "your-handle",
+  "address": "æ^æ://#opc/your-handle/x0:y0:z0:æ0",
+  "tagline": "One person. Many agents. One company.",
+  "languages": ["zh", "en"],
+  "offers": [
+    { "title": "What you do", "detail": "One line agents can understand", "url": "" }
+  ],
+  "contact": { "github": "your-github", "x": "", "email": "" },
+  "capabilities": ["agent_readable_profile"],
+  "checkout": "none",
+  "authority": {
+    "agents_may": ["read", "summarize", "propose", "open issues or pull requests"],
+    "human_only": ["accept work", "pricing", "payments", "contracts", "publish to live"]
+  },
+  "network": "https://lutheraninstitute.github.io/aeee-lab/lab/opc/registry.json",
+  "provenance": { "template": "LutheranInstitute/opc-starter", "claimed": "" },
+  "aeqr": "conceptual, not scannable"
+}
